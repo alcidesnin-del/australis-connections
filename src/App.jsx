@@ -6,18 +6,38 @@ const VERDE = "#2D6A4F";
 const CREMA = "#F7F5F0";
 const BLANCO = "#FFFFFF";
 
+const globalStyles = `
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @media (max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .grid-3 { grid-template-columns: 1fr !important; }
+    .grid-4 { grid-template-columns: 1fr 1fr !important; }
+    .grid-2-partners { grid-template-columns: 1fr !important; }
+    .grid-footer { grid-template-columns: 1fr !important; gap: 32px !important; }
+    .nav-links { display: none !important; }
+    .section-pad { padding: 60px 16px !important; }
+    .hero-pad { padding: 100px 16px 100px !important; }
+    .hero-h1 { font-size: 36px !important; }
+  }
+  @media (max-width: 1024px) and (min-width: 769px) {
+    .grid-3 { grid-template-columns: 1fr 1fr !important; }
+    .grid-4 { grid-template-columns: 1fr 1fr !important; }
+    .grid-footer { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+  }
+`;
+
 const content = {
   es: {
     nav: { about: "Nosotros", programs: "Programas", destinations: "Destinos", partners: "Partners", contact: "Contacto" },
     hero: {
       tag: "TURISMO CIENTÍFICO Y ACADÉMICO",
       headline: "Donde la Ciencia Encuentra su Territorio",
-      subheadline: "Conectamos universidades, centros de investigación y académicos de todo el mundo con los laboratorios naturales únicos de Chile. Tres generaciones de legado familiar al servicio del conocimiento.",
+      subheadline: "Conectamos universidades, centros de investigación y académicos de todo el mundo con los laboratorios naturales únicos de Chile, donde la investigación, los proyectos y la ciencia se encuentran con el estudio y el futuro.",
       cta: "Diseñar Mi Programa",
       ctaSecondary: "Explorar Programas",
     },
     stats: [
-      { value: "30+", label: "Años de Legado Familiar" },
+      { value: "50+", label: "Años de Legado Familiar" },
       { value: "3", label: "Generaciones en Turismo" },
       { value: "Chile", label: "Laboratorio Natural Único" },
       { value: "360°", label: "Servicio Integrado" },
@@ -25,8 +45,8 @@ const content = {
     about: {
       tag: "NUESTRA HISTORIA",
       title: "Tres Generaciones Conectando el Conocimiento con Chile",
-      p1: "Australis Connections nace de una tradición familiar de más de 30 años en turismo receptivo chileno. Nuestro legado comenzó con Sergio Nin de Cardona Valenzuela, co-fundador de Sportstour, uno de los operadores turísticos más importantes de Chile en su época.",
-      p2: "Hoy, Alcides Nin de Cardona lidera un proyecto que integra esa experiencia con una visión innovadora: transformar Chile en el destino número uno para programas académicos y científicos internacionales, conectando universidades extranjeras con los laboratorios naturales únicos del país.",
+      p1: "Australis Connections nace de una tradición familiar de más de 50 años en turismo receptivo chileno. Nuestro legado comenzó con Sergio Nin (Sergio Nin de Cardona Valenzuela), co-fundador de Sportstour, uno de los operadores de turismo receptivo más importantes de Chile en su época.",
+      p2: "Hoy, Alcides (hijo) y Sergio (nieto) lideran un proyecto que integra esa experiencia con una visión innovadora: transformar Chile en el destino número uno para programas académicos y científicos internacionales, conectando universidades e investigadores extranjeros con los laboratorios naturales únicos del país.",
       p3: "Nuestro modelo es simple y poderoso: diseñamos, coordinamos y garantizamos la excelencia de cada programa. Tercerizamos la operación con los mejores proveedores del país, con quienes tenemos tarifas preferenciales construidas durante décadas de relación profesional.",
       features: [
         "Red de proveedores con tarifas preferenciales negociadas",
@@ -34,7 +54,7 @@ const content = {
         "Programas de fauna silvestre con monitoreo científico activo",
         "Diseño curricular a medida para cada institución",
         "Cotización automática con sistema IA propio",
-        "Operación 100% asset-light con máxima eficiencia",
+        "Servicio de excelencia en cada detalle del programa",
       ],
     },
     programs: {
@@ -53,7 +73,7 @@ const content = {
           icon: "🔭",
           title: "Astronomía Austral",
           subtitle: "Observatorios de Clase Mundial",
-          description: "Acceso coordinado a NOIRLab/Cerro Tololo, ESO La Silla y observatorios privados en el norte de Chile. Noches de observación, reuniones con astrónomos activos y visitas a proyectos en curso.",
+          description: "Visitas diurnas coordinadas a NOIRLab/Cerro Tololo, ESO La Silla y observatorios privados en el norte de Chile. Reuniones con astrónomos activos, recorridos por las instalaciones y observación nocturna en telescopios privados habilitados para visitas.",
           highlight: "El cielo más limpio del planeta",
         },
         {
@@ -81,7 +101,7 @@ const content = {
           icon: "🏛️",
           title: "Programas Taylor Made",
           subtitle: "Diseño a Medida Total",
-          description: "Para grupos FIT, investigadores independientes o instituciones con requerimientos específicos. Desde expediciones a la Antártida hasta programas interdisciplinarios que combinan múltiples áreas científicas.",
+          description: "Para grupos FIT (2 a 4 personas), investigadores independientes o instituciones con requerimientos específicos. Desde expediciones a la Antártida hasta programas interdisciplinarios que combinan múltiples áreas científicas. Cada programa, diseñado desde cero.",
           highlight: "Sin límites en el diseño del programa",
         },
       ],
@@ -122,7 +142,7 @@ const content = {
     },
     cta: {
       headline: "Tu Próximo Programa Académico Comienza Aquí",
-      paragraph: "No dejes tu próximo programa de campo en manos de un operador convencional. Conversemos sobre tus objetivos académicos y diseñemos juntos una experiencia que tus estudiantes recordarán toda la vida.",
+      paragraph: "No dejes tu próximo programa de campo en manos de un operador convencional. Conversemos sobre tus objetivos académicos y diseñemos juntos una experiencia que tus estudiantes, profesores e investigadores recordarán toda la vida.",
       button: "Contactar un Especialista",
       trust: "Respuesta en menos de 24 horas. Cotización sin compromiso.",
     },
@@ -152,12 +172,12 @@ const content = {
     hero: {
       tag: "SCIENTIFIC & ACADEMIC TRAVEL",
       headline: "Where Science Meets Its Territory",
-      subheadline: "We connect universities, research centers and academics worldwide with Chile's unique natural laboratories. Three generations of family legacy in service of knowledge.",
+      subheadline: "We connect universities, research centers and academics worldwide with Chile's unique natural laboratories, where investigation, projects and science meets the studies and future.",
       cta: "Design My Program",
       ctaSecondary: "Explore Programs",
     },
     stats: [
-      { value: "30+", label: "Years of Family Legacy" },
+      { value: "50+", label: "Years of Family Legacy" },
       { value: "3", label: "Generations in Tourism" },
       { value: "Chile", label: "Unique Natural Laboratory" },
       { value: "360°", label: "Integrated Service" },
@@ -165,8 +185,8 @@ const content = {
     about: {
       tag: "OUR STORY",
       title: "Three Generations Connecting Knowledge with Chile",
-      p1: "Australis Connections was born from a family tradition of more than 30 years in Chilean receptive tourism. Our legacy began with Sergio Nin de Cardona Valenzuela, co-founder of Sportstour, one of Chile's most important tour operators of its era.",
-      p2: "Today, Alcides Nin de Cardona leads a project that integrates that experience with an innovative vision: making Chile the number one destination for international academic and scientific programs, connecting foreign universities with the country's unique natural laboratories.",
+      p1: "Australis Connections was born from a family tradition of more than 50 years in Chilean incoming tourism. Our legacy began with Sergio Nin (Sergio Nin de Cardona Valenzuela), co-founder of Sportstour, one of Chile's most important incoming tourism operators of its era.",
+      p2: "Today, Alcides (son) and Sergio (grandson) lead a project that integrates that experience with an innovative vision: making Chile the number one destination for international academic and scientific programs, connecting foreign universities, researchers and academics with the country's unique natural laboratories.",
       p3: "Our model is simple and powerful: we design, coordinate and guarantee the excellence of every program. We outsource operations to the country's best providers, with whom we hold preferential rates built over decades of professional relationships.",
       features: [
         "Provider network with negotiated preferential rates",
@@ -174,7 +194,7 @@ const content = {
         "Wildlife programs with active scientific monitoring",
         "Custom curriculum design for each institution",
         "Automatic quoting with proprietary AI system",
-        "100% asset-light operation with maximum efficiency",
+        "Excellence in every detail of your program",
       ],
     },
     programs: {
@@ -193,7 +213,7 @@ const content = {
           icon: "🔭",
           title: "Austral Astronomy",
           subtitle: "World-Class Observatories",
-          description: "Coordinated access to NOIRLab/Cerro Tololo, ESO La Silla and private observatories in northern Chile. Observation nights, meetings with active astronomers and visits to ongoing projects.",
+          description: "Daytime coordinated visits to NOIRLab/Cerro Tololo, ESO La Silla and private observatories in northern Chile. Meetings with active astronomers, facility tours and night observation at private telescopes enabled for educational visits.",
           highlight: "The cleanest sky on the planet",
         },
         {
@@ -221,7 +241,7 @@ const content = {
           icon: "🏛️",
           title: "Taylor Made Programs",
           subtitle: "Total Custom Design",
-          description: "For FIT groups, independent researchers or institutions with specific requirements. From Antarctic expeditions to interdisciplinary programs combining multiple scientific fields.",
+          description: "For FIT groups (2 to 4 people), independent researchers or institutions with specific requirements. From Antarctic expeditions to interdisciplinary programs combining multiple scientific fields. Every program, designed from scratch.",
           highlight: "No limits in program design",
         },
       ],
@@ -262,7 +282,7 @@ const content = {
     },
     cta: {
       headline: "Your Next Academic Program Starts Here",
-      paragraph: "Don't leave your next field program in the hands of a conventional operator. Let's talk about your academic goals and design together an experience your students will remember for a lifetime.",
+      paragraph: "Don't leave your next field program in the hands of a conventional operator. Let's talk about your academic goals and design together an experience your students, professors and researchers will remember for a lifetime.",
       button: "Contact a Specialist",
       trust: "Response within 24 hours. No-obligation quote.",
     },
@@ -316,6 +336,7 @@ export default function App() {
 
   return (
     <div style={{ fontFamily: "'Georgia', serif", background: CREMA, color: "#1A1A1A", minHeight: "100vh" }}>
+      <style>{globalStyles}</style>
 
       {/* NAV */}
       <nav style={{
@@ -331,21 +352,25 @@ export default function App() {
             <div style={{ fontSize: 20, fontWeight: 700, color: scrolled ? AZUL : BLANCO, letterSpacing: 2 }}>AUSTRALIS</div>
             <div style={{ fontSize: 11, color: scrolled ? TERRACOTA : "rgba(255,255,255,0.8)", letterSpacing: 4, marginTop: -2 }}>CONNECTIONS</div>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
-            {["about","programs","destinations","partners","contact"].map(k => (
-              <button key={k} onClick={() => scrollTo(k)} style={{
-                background: "none", border: "none", cursor: "pointer", fontSize: 13, fontFamily: "'Arial', sans-serif",
-                color: scrolled ? "#333" : "rgba(255,255,255,0.9)", letterSpacing: 1, fontWeight: 500,
-                textTransform: "uppercase", padding: 0,
-              }}>{t.nav[k]}</button>
-            ))}
-            <div style={{ display: "flex", gap: 4, marginLeft: 16, borderLeft: "1px solid rgba(128,128,128,0.3)", paddingLeft: 16 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", justifyContent: "flex-end" }}>
+            <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+              {["about","programs","destinations","partners","contact"].map(k => (
+                <button key={k} onClick={() => scrollTo(k)} style={{
+                  background: "none", border: "none", cursor: "pointer", fontSize: 12, fontFamily: "'Arial', sans-serif",
+                  color: scrolled ? "#333" : "rgba(255,255,255,0.9)", letterSpacing: 1, fontWeight: 500,
+                  textTransform: "uppercase", padding: 0,
+                }}>{t.nav[k]}</button>
+              ))}
+            </div>
+            <div style={{ display: "flex", gap: 4, borderLeft: "1px solid rgba(128,128,128,0.3)", paddingLeft: 12, flexShrink: 0 }}>
               {["es","en"].map(l => (
                 <button key={l} onClick={() => setLang(l)} style={{
                   background: lang === l ? TERRACOTA : "transparent",
                   color: lang === l ? BLANCO : (scrolled ? "#555" : "rgba(255,255,255,0.7)"),
-                  border: "none", cursor: "pointer", padding: "4px 10px", borderRadius: 4,
+                  border: lang === l ? "none" : `1px solid ${scrolled ? "#ccc" : "rgba(255,255,255,0.4)"}`,
+                  cursor: "pointer", padding: "5px 12px", borderRadius: 4,
                   fontSize: 12, fontWeight: 700, fontFamily: "'Arial', sans-serif",
+                  minWidth: 36,
                 }}>{l.toUpperCase()}</button>
               ))}
             </div>
@@ -412,7 +437,7 @@ export default function App() {
 
       {/* ABOUT */}
       <section id="about" style={{ padding: "100px 24px", background: BLANCO }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
+        <div className="grid-2" style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
           <div>
             <div style={{ color: TERRACOTA, fontSize: 11, fontFamily: "'Arial', sans-serif", letterSpacing: 3, fontWeight: 700, marginBottom: 16 }}>{t.about.tag}</div>
             <h2 style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 700, color: AZUL, lineHeight: 1.2, marginBottom: 24 }}>{t.about.title}</h2>
@@ -442,7 +467,7 @@ export default function App() {
             <h2 style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 700, color: AZUL, marginBottom: 16 }}>{t.programs.title}</h2>
             <p style={{ color: "#666", maxWidth: 600, margin: "0 auto", fontFamily: "'Arial', sans-serif", lineHeight: 1.7 }}>{t.programs.subtitle}</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+          <div className="grid-3" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
             {t.programs.items.map((p, i) => (
               <div key={i} style={{
                 background: BLANCO, borderRadius: 12, padding: 32, position: "relative",
@@ -473,7 +498,7 @@ export default function App() {
             <h2 style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 700, color: BLANCO, marginBottom: 16 }}>{t.destinations.title}</h2>
             <p style={{ color: "rgba(255,255,255,0.7)", maxWidth: 600, margin: "0 auto", fontFamily: "'Arial', sans-serif", lineHeight: 1.7 }}>{t.destinations.subtitle}</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+          <div className="grid-3" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
             {t.destinations.items.map((d, i) => (
               <div key={i} style={{
                 background: "rgba(255,255,255,0.07)", borderRadius: 12, padding: 28,
@@ -496,7 +521,7 @@ export default function App() {
             <div style={{ color: TERRACOTA, fontSize: 11, fontFamily: "'Arial', sans-serif", letterSpacing: 3, fontWeight: 700, marginBottom: 16 }}>{t.model.tag}</div>
             <h2 style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 700, color: AZUL }}>{t.model.title}</h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32 }}>
+          <div className="grid-4" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32 }}>
             {t.model.steps.map((s, i) => (
               <div key={i} style={{ textAlign: "center" }}>
                 <div style={{
@@ -522,7 +547,7 @@ export default function App() {
             <h2 style={{ fontSize: "clamp(28px, 3vw, 42px)", fontWeight: 700, color: AZUL, marginBottom: 16 }}>{t.partners.title}</h2>
             <p style={{ color: "#666", maxWidth: 600, margin: "0 auto", fontFamily: "'Arial', sans-serif", lineHeight: 1.7 }}>{t.partners.subtitle}</p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24 }}>
+          <div className="grid-2-partners" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 24 }}>
             {t.partners.items.map((p, i) => (
               <div key={i} style={{
                 background: BLANCO, borderRadius: 12, padding: 32,
@@ -570,7 +595,7 @@ export default function App() {
       {/* FOOTER */}
       <footer style={{ background: "#0a1f35", padding: "60px 24px 32px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 48, marginBottom: 48 }}>
+          <div className="grid-footer" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 48, marginBottom: 48 }}>
             <div>
               <div style={{ fontSize: 20, fontWeight: 700, color: BLANCO, letterSpacing: 2, marginBottom: 4 }}>AUSTRALIS</div>
               <div style={{ fontSize: 11, color: TERRACOTA, letterSpacing: 4, marginBottom: 16 }}>CONNECTIONS</div>
