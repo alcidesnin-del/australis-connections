@@ -349,8 +349,16 @@ export default function App() {
       }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ cursor: "pointer" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-            <div style={{ fontSize: 20, fontWeight: 700, color: scrolled ? AZUL : BLANCO, letterSpacing: 2 }}>AUSTRALIS</div>
-            <div style={{ fontSize: 11, color: scrolled ? TERRACOTA : "rgba(255,255,255,0.8)", letterSpacing: 4, marginTop: -2 }}>CONNECTIONS</div>
+            <img
+              src="/logo.png"
+              alt="Australis Connections"
+              style={{
+                height: scrolled ? 52 : 64,
+                width: "auto",
+                transition: "height 0.3s ease",
+                filter: scrolled ? "none" : "brightness(0) invert(1)",
+              }}
+            />
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", justifyContent: "flex-end" }}>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
