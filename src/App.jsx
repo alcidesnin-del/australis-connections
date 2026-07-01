@@ -353,7 +353,7 @@ export default function App() {
               src="/logo.png"
               alt="Australis Connections"
               style={{
-                height: scrolled ? 52 : 64,
+                height: scrolled ? 80 : 100,
                 width: "auto",
                 transition: "height 0.3s ease",
                 filter: scrolled ? "none" : "brightness(0) invert(1)",
