@@ -45,7 +45,7 @@ const content = {
     about: {
       tag: "NUESTRA HISTORIA",
       title: "Tres Generaciones Conectando el Conocimiento con Chile",
-      p1: "Australis Connections nace de una tradición familiar de más de 50 años en turismo receptivo chileno. Nuestro legado comenzó con Sergio Nin (Sergio Nin de Cardona Valenzuela), co-fundador de Sportstour, uno de los operadores de turismo receptivo más importantes de Chile en su época.",
+      p1: "Australis Connections nace de una tradición familiar de más de 50 años en turismo receptivo chileno. Nuestro legado comenzó con Sergio Nin (Sergio Nin de Cardona), empleado-fundador de Turismo Cocha y Senior ejecutivo de Sportstour, uno de los operadores de turismo receptivo más importantes de Chile en su época.",
       p2: "Hoy, Alcides (hijo) y Sergio (nieto) lideran un proyecto que integra esa experiencia con una visión clara: posicionar a Chile como el destino de referencia mundial para expediciones científicas internacionales, conectando investigadores, científicos y profesores con los proyectos activos y ecosistemas únicos del país.",
       p3: "Nuestro modelo es simple y poderoso: diseñamos, coordinamos y garantizamos la excelencia de cada programa. Tercerizamos la operación con los mejores proveedores del país, con quienes tenemos tarifas preferenciales construidas durante décadas de relación profesional.",
       features: [
@@ -80,7 +80,7 @@ const content = {
           icon: "🌋",
           title: "Geología & Vulcanología",
           subtitle: "Laboratorios Naturales a Cielo Abierto",
-          description: "Desde el desierto de Atacama hasta los volcanes activos del sur. Muestreo en terreno, monitoreo sísmico y trabajo conjunto con geólogos del SERNAGEOMIN en zonas de acceso restringido.",
+          description: "Expediciones geológicas en algunos de los territorios más extraordinarios del planeta. Desierto de Atacama, cordillera andina y zonas volcánicas del sur de Chile, con guías especializados en geología y ciencias de la tierra.",
           highlight: "Acceso a zonas de investigación activa",
         },
         {
@@ -220,7 +220,7 @@ const content = {
           icon: "🌋",
           title: "Geology & Volcanology",
           subtitle: "Open-Air Natural Laboratories",
-          description: "From the Atacama Desert to the active volcanoes of the south. Field sampling, seismic monitoring and joint work with SERNAGEOMIN geologists in restricted-access zones.",
+          description: "Geological expeditions across some of the most extraordinary territories on the planet. Atacama Desert, Andean mountain range and volcanic zones in southern Chile, with guides specialized in geology and earth sciences.",
           highlight: "Access to active research zones",
         },
         {
@@ -328,10 +328,24 @@ export default function App() {
     setMobileOpen(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => { setContactOpen(false); setSent(false); }, 2000);
+    const form = e.target;
+    const data = new FormData(form);
+    try {
+      const response = await fetch("https://formspree.io/f/xaqrkvnz", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" }
+      });
+      if (response.ok) {
+        setSent(true);
+        form.reset();
+        setTimeout(() => { setContactOpen(false); setSent(false); }, 3000);
+      }
+    } catch (error) {
+      console.error("Error sending form:", error);
+    }
   };
 
   return (
