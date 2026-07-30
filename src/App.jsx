@@ -185,10 +185,7 @@ const content = {
     about: {
       tag: "OUR STORY",
       title: "Three Generations Connecting Knowledge with Chile",
-commit changes      
-p1: "Australis Connections was born from a family tradition of more than 50 years in Chilean incoming tourism. Our legacy began with Sergio Nin (Sergio Nin de Cardona), founding employee of Turismo Cocha and Senior Executive of Sportstour, one of Chile's most important incoming tourism operators of its era.",
-Commit changes
-
+      p1: "Australis Connections was born from a family tradition of more than 50 years in Chilean incoming tourism. Our legacy began with Sergio Nin (Sergio Nin de Cardona), founding employee of Turismo Cocha and Senior Executive of Sportstour, one of Chile's most important incoming tourism operators of its era.",
       p2: "Today, Alcides (son) and Sergio (grandson) lead a project with a clear vision: positioning Chile as the world reference destination for international scientific expeditions, connecting researchers, scientists and professors with the country's active projects and unique ecosystems.",
       p3: "Our model is simple and powerful: we design, coordinate and guarantee the excellence of every program. We outsource operations to the country's best providers, with whom we hold preferential rates built over decades of professional relationships.",
       features: [
