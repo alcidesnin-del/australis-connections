@@ -122,12 +122,12 @@ const content = {
     partners: {
       tag: "ALIANZAS CIENTÍFICAS",
       title: "Conectados con la Ciencia de Clase Mundial",
-      subtitle: "Nuestros programas están respaldados por alianzas con las instituciones científicas más importantes de Chile.",
+      subtitle: "Construimos relaciones institucionales con centros de investigación y programas de educación de referencia en Chile. Comunicamos su estado con transparencia.",
       items: [
-        { name: "NOIRLab / Cerro Tololo", desc: "Observatorio inter-americano. Acceso a telescopios de clase mundial en el norte de Chile.", status: "Conversaciones avanzadas" },
-        { name: "ESO La Silla", desc: "Observatorio Europeo Austral. Programas de astronomía con acceso a instalaciones únicas.", status: "Conversaciones iniciales" },
-        { name: "CEAZA", desc: "Centro de Estudios Avanzados en Zonas Áridas. Investigación ambiental y climática regional.", status: "Acercamiento institucional" },
-        { name: "CEDUC UCN", desc: "Centro de Educación Continua. Programa Travesía activo. Entidad patrocinadora CORFO.", status: "Alianza activa" },
+        { name: "CEDUC UCN", desc: "Centro de Educación y Capacitación, Universidad Católica del Norte. Programa Travesía activo. Entidad patrocinadora CORFO.", status: "Alianza activa" },
+        { name: "Programa Zorro Chilote", desc: "Colaboración formalizada con Darío Moreira, investigador del Programa de Monitoreo del Zorro de Darwin (USACH / IEB), para nuestro programa insignia de trabajo de campo en Chiloé, integrado a un proyecto de investigación activo.", status: "Alianza formalizada" },
+        { name: "CEAZA", desc: "Centro Científico Avanzado de Zonas Áridas. Vinculación en desarrollo para integrar turismo científico con sus proyectos de investigación en oceanografía, biodiversidad y zonas áridas.", status: "Vínculo en desarrollo" },
+        { name: "Observatorios Astronómicos", desc: "Coordinamos observación astronómica mediante los programas públicos de visitas de los principales observatorios del norte de Chile (ESO La Silla, Cerro Tololo).", status: "Acceso mediante programas públicos" },
       ],
     },
     model: {
@@ -262,12 +262,12 @@ const content = {
     partners: {
       tag: "SCIENTIFIC ALLIANCES",
       title: "Connected with World-Class Science",
-      subtitle: "Our programs are backed by alliances with Chile's most important scientific institutions.",
+      subtitle: "We build institutional relationships with reference research centers and education programs in Chile. We communicate their status with transparency.",
       items: [
-        { name: "NOIRLab / Cerro Tololo", desc: "Inter-American Observatory. Access to world-class telescopes in northern Chile.", status: "Advanced conversations" },
-        { name: "ESO La Silla", desc: "European Southern Observatory. Astronomy programs with access to unique facilities.", status: "Initial conversations" },
-        { name: "CEAZA", desc: "Center for Advanced Studies in Arid Zones. Regional environmental and climate research.", status: "Institutional approach" },
-        { name: "CEDUC UCN", desc: "Continuing Education Center. Active Travesía program. CORFO sponsoring entity.", status: "Active alliance" },
+        { name: "CEDUC UCN", desc: "Education and Training Center, Universidad Católica del Norte. Active Travesía program. CORFO sponsoring entity.", status: "Active alliance" },
+        { name: "Darwin's Fox Program", desc: "Formalized collaboration with Darío Moreira, researcher on the Darwin's Fox Monitoring Program (USACH / IEB), for our flagship fieldwork program in Chiloé, integrated into an active research project.", status: "Formalized alliance" },
+        { name: "CEAZA", desc: "Advanced Center for Arid Zone Research. Relationship in development to integrate scientific tourism with its research projects in oceanography, biodiversity and arid zones.", status: "Relationship in development" },
+        { name: "Astronomical Observatories", desc: "We coordinate astronomical observation through the public visit programs of the main observatories in northern Chile (ESO La Silla, Cerro Tololo).", status: "Access through public programs" },
       ],
     },
     model: {
