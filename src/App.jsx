@@ -6,6 +6,117 @@ const VERDE = "#2D6A4F";
 const CREMA = "#F7F5F0";
 const BLANCO = "#FFFFFF";
 
+const ICON_PATHS = {
+  fox: (
+    <>
+      <path d="M4 8 L8 2 L9.5 8" />
+      <path d="M20 8 L16 2 L14.5 8" />
+      <path d="M4 8 C4 15 8 19 12 19 C16 19 20 15 20 8 C17 6.5 14 6 12 6 C10 6 7 6.5 4 8 Z" />
+      <circle cx="9.3" cy="11.5" r="0.6" fill="currentColor" stroke="none" />
+      <circle cx="14.7" cy="11.5" r="0.6" fill="currentColor" stroke="none" />
+      <path d="M11 14 L13 14 L12 15.4 Z" fill="currentColor" stroke="none" />
+    </>
+  ),
+  telescope: (
+    <>
+      <path d="M13.5 3 L15 6.4 L18.5 6.8 L16 9.1 L16.7 12.5 L13.5 10.7 L10.3 12.5 L11 9.1 L8.5 6.8 L12 6.4 Z" fill="currentColor" stroke="none" />
+      <path d="M2 20 L8 11 L11 15 L14 9 L22 20 Z" />
+    </>
+  ),
+  volcano: (
+    <>
+      <path d="M3 19 L8 9 L10 12 L13 6 L15 9 L13 12 L18 19 Z" />
+      <circle cx="13" cy="3.4" r="1" />
+    </>
+  ),
+  wave: (
+    <>
+      <path d="M2 9 C4 6 6 6 8 9 C10 12 12 12 14 9 C16 6 18 6 20 9 C21 10 22 10 22 10" />
+      <path d="M2 15 C4 12 6 12 8 15 C10 18 12 18 14 15 C16 12 18 12 20 15" />
+    </>
+  ),
+  leaf: (
+    <>
+      <path d="M4 20 C4 20 4 4 20 4 C20 4 20 20 4 20 Z" />
+      <line x1="4" y1="20" x2="18" y2="6" />
+    </>
+  ),
+  compass: (
+    <>
+      <circle cx="12" cy="5" r="1.5" />
+      <line x1="12" y1="6.5" x2="7" y2="20" />
+      <line x1="12" y1="6.5" x2="17" y2="20" />
+      <line x1="9.2" y1="13" x2="14.8" y2="13" />
+    </>
+  ),
+  cactus: (
+    <>
+      <path d="M12 21 L12 5 Q12 3 14 3 Q16 3 16 5 L16 9" />
+      <path d="M12 13 Q8 13 8 10 L8 6" />
+    </>
+  ),
+  star: (
+    <path d="M12 3 L14.2 9.4 L21 9.9 L15.7 14.1 L17.6 21 L12 17 L6.4 21 L8.3 14.1 L3 9.9 L9.8 9.4 Z" />
+  ),
+  grapes: (
+    <>
+      <circle cx="9" cy="14" r="2" />
+      <circle cx="13" cy="14" r="2" />
+      <circle cx="11" cy="17.2" r="2" />
+      <circle cx="9" cy="10" r="2" />
+      <circle cx="13" cy="10" r="2" />
+      <circle cx="11" cy="6.8" r="2" />
+      <path d="M11 5 L11 2.5" />
+      <path d="M11 2.5 Q13 1 15 2.5" />
+    </>
+  ),
+  mountain: (
+    <>
+      <path d="M3 19 L9 8 L12 13 L15 6 L21 19 Z" />
+      <path d="M7.5 11 L10.5 11" />
+      <path d="M13.5 8.5 L16.5 8.5" />
+    </>
+  ),
+  snowflake: (
+    <>
+      <line x1="12" y1="3" x2="12" y2="21" />
+      <line x1="4.5" y1="7.5" x2="19.5" y2="16.5" />
+      <line x1="4.5" y1="16.5" x2="19.5" y2="7.5" />
+      <line x1="12" y1="3" x2="10" y2="5.4" />
+      <line x1="12" y1="3" x2="14" y2="5.4" />
+      <line x1="12" y1="21" x2="10" y2="18.6" />
+      <line x1="12" y1="21" x2="14" y2="18.6" />
+    </>
+  ),
+  microscope: (
+    <>
+      <line x1="8" y1="21" x2="16" y2="21" />
+      <line x1="12" y1="21" x2="12" y2="17.5" />
+      <line x1="7.5" y1="17.5" x2="16.5" y2="17.5" />
+      <path d="M10.5 17.5 L10.5 11.5 Q10.5 9 13 9 L15 9" />
+      <circle cx="15" cy="6.8" r="2.1" />
+      <line x1="15" y1="8.9" x2="15" y2="10.6" />
+    </>
+  ),
+};
+
+function Icon({ name, size = 24, color = "currentColor" }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {ICON_PATHS[name]}
+    </svg>
+  );
+}
+
 const globalStyles = `
   * { box-sizing: border-box; margin: 0; padding: 0; }
   @media (max-width: 768px) {
@@ -63,42 +174,42 @@ const content = {
       subtitle: "Cada expedición es diseñada a medida para científicos, investigadores y profesores, integrando acceso directo a proyectos activos, expertos locales y la red científica más sólida de Chile.",
       items: [
         {
-          icon: "🦊",
+          icon: "fox",
           title: "Zorro Chilote",
           subtitle: "Conservación y Fauna Silvestre",
           description: "Programa insignia de Australis Connections. Monitoreo activo del Zorro Chilote (Lycalopex fulvipes), una de las especies más raras y amenazadas del mundo. Trabajo en terreno con nuestro equipo científico en Chiloé.",
           highlight: "Programa exclusivo en el mundo",
         },
         {
-          icon: "🔭",
+          icon: "telescope",
           title: "Astronomía Austral",
           subtitle: "Observatorios de Clase Mundial",
           description: "Visitas diurnas coordinadas a NOIRLab/Cerro Tololo, ESO La Silla y observatorios privados en el norte de Chile. Reuniones con astrónomos activos, recorridos por las instalaciones y observación nocturna en telescopios privados habilitados para visitas.",
           highlight: "El cielo más limpio del planeta",
         },
         {
-          icon: "🌋",
+          icon: "volcano",
           title: "Geología & Vulcanología",
           subtitle: "Laboratorios Naturales a Cielo Abierto",
           description: "Expediciones geológicas en algunos de los territorios más extraordinarios del planeta. Desierto de Atacama, cordillera andina y zonas volcánicas del sur de Chile, con guías especializados en geología y ciencias de la tierra.",
           highlight: "Acceso a zonas de investigación activa",
         },
         {
-          icon: "🌊",
+          icon: "wave",
           title: "Oceanografía & Biodiversidad Marina",
           subtitle: "Corriente de Humboldt",
           description: "Expediciones en uno de los sistemas oceánicos más productivos del planeta. Colaboración con CEAZA, ESMOI y centros de investigación marina en los fiordos patagónicos y el Archipiélago de Humboldt.",
           highlight: "Ecosistema marino único en el mundo",
         },
         {
-          icon: "🌿",
+          icon: "leaf",
           title: "Ecosistemas & Medio Ambiente",
           subtitle: "Desde Atacama hasta la Patagonia",
           description: "Programas de campo en los ecosistemas más extremos y diversos del planeta: bosque valdiviano, desierto florido, glaciares patagónicos, bosque de araucarias y ecosistemas costeros.",
           highlight: "4.300 km de diversidad ecológica",
         },
         {
-          icon: "🏛️",
+          icon: "compass",
           title: "Programas Taylor Made",
           subtitle: "Diseño a Medida Total",
           description: "Para grupos FIT (2 a 4 personas), investigadores independientes o instituciones con requerimientos específicos. Desde expediciones a la Antártida hasta programas interdisciplinarios que combinan múltiples áreas científicas. Cada programa, diseñado desde cero.",
@@ -111,12 +222,12 @@ const content = {
       title: "Chile: El Laboratorio Natural Más Diverso del Planeta",
       subtitle: "4.300 kilómetros que concentran desiertos, volcanes, glaciares, fiordos, bosques templados y cielos de clase mundial.",
       items: [
-        { name: "Desierto de Atacama", desc: "Astronomía, geología extrema, salares y el cielo más limpio del mundo.", emoji: "🌵" },
-        { name: "Región de Coquimbo", desc: "Observatorios mundiales, ecosistemas semiáridos, fauna costera y CEAZA.", emoji: "⭐" },
-        { name: "Zona Central", desc: "Geología andina, viñedos científicos, geomorfología y bosques nativos.", emoji: "🍇" },
-        { name: "Chiloé & Los Lagos", desc: "Fauna silvestre endémica, ecosistemas húmedos y el Zorro Chilote.", emoji: "🦊" },
-        { name: "Patagonia", desc: "Glaciares, geología del granito, ecología de estepa y biodiversidad única.", emoji: "🏔️" },
-        { name: "Antártida", desc: "Expediciones científicas al continente blanco. Programa Taylor Made exclusivo.", emoji: "🧊" },
+        { name: "Desierto de Atacama", desc: "Astronomía, geología extrema, salares y el cielo más limpio del mundo.", emoji: "cactus" },
+        { name: "Región de Coquimbo", desc: "Observatorios mundiales, ecosistemas semiáridos, fauna costera y CEAZA.", emoji: "star" },
+        { name: "Zona Central", desc: "Geología andina, viñedos científicos, geomorfología y bosques nativos.", emoji: "grapes" },
+        { name: "Chiloé & Los Lagos", desc: "Fauna silvestre endémica, ecosistemas húmedos y el Zorro Chilote.", emoji: "fox" },
+        { name: "Patagonia", desc: "Glaciares, geología del granito, ecología de estepa y biodiversidad única.", emoji: "mountain" },
+        { name: "Antártida", desc: "Expediciones científicas al continente blanco. Programa Taylor Made exclusivo.", emoji: "snowflake" },
       ],
     },
     partners: {
@@ -164,6 +275,9 @@ const content = {
       message: "Cuéntanos sobre tu programa",
       send: "Enviar Solicitud",
       thanks: "¡Gracias! Nos contactaremos pronto.",
+      error: "No pudimos enviar tu mensaje. Por favor intenta de nuevo o escríbenos directamente a info@australisconnections.com",
+      sending: "Enviando...",
+      requiredNote: "* Todos los campos son obligatorios",
       interests: ["Astronomía", "Zorro Chilote / Fauna Silvestre", "Geología & Vulcanología", "Oceanografía & Biodiversidad Marina", "Ecosistemas & Medio Ambiente", "Programa Taylor Made"],
     },
   },
@@ -203,42 +317,42 @@ const content = {
       subtitle: "Every expedition is tailor-made for scientists, researchers and professors, integrating direct access to active projects, local experts and Chile's most solid scientific network.",
       items: [
         {
-          icon: "🦊",
+          icon: "fox",
           title: "Darwin's Fox",
           subtitle: "Conservation & Wildlife",
           description: "Australis Connections' flagship program. Active monitoring of the Darwin's Fox (Lycalopex fulvipes), one of the rarest and most endangered species in the world. Field work with our scientific team in Chiloé.",
           highlight: "Exclusive program in the world",
         },
         {
-          icon: "🔭",
+          icon: "telescope",
           title: "Austral Astronomy",
           subtitle: "World-Class Observatories",
           description: "Daytime coordinated visits to NOIRLab/Cerro Tololo, ESO La Silla and private observatories in northern Chile. Meetings with active astronomers, facility tours and night observation at private telescopes enabled for educational visits.",
           highlight: "The cleanest sky on the planet",
         },
         {
-          icon: "🌋",
+          icon: "volcano",
           title: "Geology & Volcanology",
           subtitle: "Open-Air Natural Laboratories",
           description: "Geological expeditions across some of the most extraordinary territories on the planet. Atacama Desert, Andean mountain range and volcanic zones in southern Chile, with guides specialized in geology and earth sciences.",
           highlight: "Access to active research zones",
         },
         {
-          icon: "🌊",
+          icon: "wave",
           title: "Oceanography & Marine Biodiversity",
           subtitle: "Humboldt Current System",
           description: "Expeditions in one of the planet's most productive ocean systems. Collaboration with CEAZA, ESMOI and marine research centers in Patagonian fjords and the Humboldt Archipelago.",
           highlight: "Unique marine ecosystem in the world",
         },
         {
-          icon: "🌿",
+          icon: "leaf",
           title: "Ecosystems & Environment",
           subtitle: "From Atacama to Patagonia",
           description: "Field programs in the planet's most extreme and diverse ecosystems: Valdivian forest, blooming desert, Patagonian glaciers, araucaria forests and coastal ecosystems.",
           highlight: "4,300 km of ecological diversity",
         },
         {
-          icon: "🏛️",
+          icon: "compass",
           title: "Taylor Made Programs",
           subtitle: "Total Custom Design",
           description: "For FIT groups (2 to 4 people), independent researchers or institutions with specific requirements. From Antarctic expeditions to interdisciplinary programs combining multiple scientific fields. Every program, designed from scratch.",
@@ -251,12 +365,12 @@ const content = {
       title: "Chile: The Planet's Most Diverse Natural Laboratory",
       subtitle: "4,300 kilometers concentrating deserts, volcanoes, glaciers, fjords, temperate forests and world-class skies.",
       items: [
-        { name: "Atacama Desert", desc: "Astronomy, extreme geology, salt flats and the world's cleanest sky.", emoji: "🌵" },
-        { name: "Coquimbo Region", desc: "World observatories, semi-arid ecosystems, coastal fauna and CEAZA.", emoji: "⭐" },
-        { name: "Central Chile", desc: "Andean geology, scientific vineyards, geomorphology and native forests.", emoji: "🍇" },
-        { name: "Chiloé & Los Lagos", desc: "Endemic wildlife, humid ecosystems and the Darwin's Fox.", emoji: "🦊" },
-        { name: "Patagonia", desc: "Glaciers, granite geology, steppe ecology and unique biodiversity.", emoji: "🏔️" },
-        { name: "Antarctica", desc: "Scientific expeditions to the white continent. Exclusive Taylor Made program.", emoji: "🧊" },
+        { name: "Atacama Desert", desc: "Astronomy, extreme geology, salt flats and the world's cleanest sky.", emoji: "cactus" },
+        { name: "Coquimbo Region", desc: "World observatories, semi-arid ecosystems, coastal fauna and CEAZA.", emoji: "star" },
+        { name: "Central Chile", desc: "Andean geology, scientific vineyards, geomorphology and native forests.", emoji: "grapes" },
+        { name: "Chiloé & Los Lagos", desc: "Endemic wildlife, humid ecosystems and the Darwin's Fox.", emoji: "fox" },
+        { name: "Patagonia", desc: "Glaciers, granite geology, steppe ecology and unique biodiversity.", emoji: "mountain" },
+        { name: "Antarctica", desc: "Scientific expeditions to the white continent. Exclusive Taylor Made program.", emoji: "snowflake" },
       ],
     },
     partners: {
@@ -304,6 +418,9 @@ const content = {
       message: "Tell us about your program",
       send: "Send Request",
       thanks: "Thank you! We will contact you soon.",
+      error: "We couldn't send your message. Please try again or email us directly at info@australisconnections.com",
+      sending: "Sending...",
+      requiredNote: "* All fields are required",
       interests: ["Astronomy", "Darwin's Fox / Wildlife", "Geology & Volcanology", "Oceanography & Marine Biodiversity", "Ecosystems & Environment", "Taylor Made Program"],
     },
   },
@@ -315,6 +432,8 @@ export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState(false);
   const t = content[lang];
 
   useEffect(() => {
@@ -332,6 +451,10 @@ export default function App() {
     e.preventDefault();
     const form = e.target;
     const data = new FormData(form);
+    const senderEmail = data.get("email");
+    if (senderEmail) data.append("_cc", senderEmail);
+    setSending(true);
+    setSendError(false);
     try {
       const response = await fetch("https://formspree.io/f/xaqrkvnz", {
         method: "POST",
@@ -342,9 +465,14 @@ export default function App() {
         setSent(true);
         form.reset();
         setTimeout(() => { setContactOpen(false); setSent(false); }, 3000);
+      } else {
+        setSendError(true);
       }
     } catch (error) {
       console.error("Error sending form:", error);
+      setSendError(true);
+    } finally {
+      setSending(false);
     }
   };
 
@@ -497,7 +625,14 @@ export default function App() {
                 borderTop: `4px solid ${i === 0 ? TERRACOTA : i === 1 ? AZUL : VERDE}`,
                 transition: "transform 0.2s ease",
               }}>
-                <div style={{ fontSize: 40, marginBottom: 16 }}>{p.icon}</div>
+                <div style={{
+                  width: 56, height: 56, borderRadius: "50%",
+                  border: `1.5px solid ${i === 0 ? TERRACOTA : i === 1 ? AZUL : VERDE}`,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  marginBottom: 20, color: i === 0 ? TERRACOTA : i === 1 ? AZUL : VERDE,
+                }}>
+                  <Icon name={p.icon} size={26} />
+                </div>
                 <div style={{ fontSize: 11, color: TERRACOTA, fontFamily: "'Arial', sans-serif", letterSpacing: 2, fontWeight: 700, marginBottom: 8 }}>{p.subtitle}</div>
                 <h3 style={{ fontSize: 20, fontWeight: 700, color: AZUL, marginBottom: 12 }}>{p.title}</h3>
                 <p style={{ color: "#666", fontSize: 14, lineHeight: 1.7, fontFamily: "'Arial', sans-serif", marginBottom: 16 }}>{p.description}</p>
@@ -527,7 +662,14 @@ export default function App() {
                 border: "1px solid rgba(255,255,255,0.1)",
                 backdropFilter: "blur(10px)",
               }}>
-                <div style={{ fontSize: 36, marginBottom: 12 }}>{d.emoji}</div>
+                <div style={{
+                  width: 48, height: 48, borderRadius: "50%",
+                  border: `1.5px solid ${TERRACOTA}`,
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  marginBottom: 16, color: TERRACOTA,
+                }}>
+                  <Icon name={d.emoji} size={22} />
+                </div>
                 <h3 style={{ fontSize: 18, fontWeight: 700, color: BLANCO, marginBottom: 8 }}>{d.name}</h3>
                 <p style={{ color: "rgba(255,255,255,0.65)", fontSize: 14, lineHeight: 1.6, fontFamily: "'Arial', sans-serif" }}>{d.desc}</p>
               </div>
@@ -581,7 +723,7 @@ export default function App() {
                   background: `linear-gradient(135deg, ${AZUL}, ${VERDE})`,
                   flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center",
                   color: BLANCO, fontSize: 20,
-                }}>🔬</div>
+                }}><Icon name="microscope" size={22} color={BLANCO} /></div>
                 <div>
                   <h3 style={{ fontSize: 17, fontWeight: 700, color: AZUL, marginBottom: 8 }}>{p.name}</h3>
                   <p style={{ color: "#666", fontSize: 14, lineHeight: 1.6, fontFamily: "'Arial', sans-serif", marginBottom: 12 }}>{p.desc}</p>
@@ -678,35 +820,49 @@ export default function App() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                <input type="hidden" name="_subject" value={`Nueva consulta - Australis Connections (${lang})`} />
+                <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex="-1" autoComplete="off" />
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-                  {[t.contact.name, t.contact.lastname].map((label, i) => (
+                  {[
+                    { label: t.contact.name, name: "firstName" },
+                    { label: t.contact.lastname, name: "lastName" },
+                  ].map((f, i) => (
                     <div key={i}>
-                      <label style={{ fontSize: 12, color: "#555", fontFamily: "'Arial', sans-serif", fontWeight: 600, display: "block", marginBottom: 6 }}>{label}</label>
-                      <input required style={{ width: "100%", padding: "10px 14px", border: "1px solid #ddd", borderRadius: 6, fontSize: 14, fontFamily: "'Arial', sans-serif", boxSizing: "border-box" }} />
+                      <label style={{ fontSize: 12, color: "#555", fontFamily: "'Arial', sans-serif", fontWeight: 600, display: "block", marginBottom: 6 }}>{f.label} *</label>
+                      <input required name={f.name} style={{ width: "100%", padding: "10px 14px", border: "1px solid #ddd", borderRadius: 6, fontSize: 14, fontFamily: "'Arial', sans-serif", boxSizing: "border-box" }} />
                     </div>
                   ))}
                 </div>
-                {[t.contact.email, t.contact.institution].map((label, i) => (
+                {[
+                  { label: t.contact.email, name: "email", type: "email" },
+                  { label: t.contact.institution, name: "institution", type: "text" },
+                ].map((f, i) => (
                   <div key={i}>
-                    <label style={{ fontSize: 12, color: "#555", fontFamily: "'Arial', sans-serif", fontWeight: 600, display: "block", marginBottom: 6 }}>{label}</label>
-                    <input required type={i === 0 ? "email" : "text"} style={{ width: "100%", padding: "10px 14px", border: "1px solid #ddd", borderRadius: 6, fontSize: 14, fontFamily: "'Arial', sans-serif", boxSizing: "border-box" }} />
+                    <label style={{ fontSize: 12, color: "#555", fontFamily: "'Arial', sans-serif", fontWeight: 600, display: "block", marginBottom: 6 }}>{f.label} *</label>
+                    <input required name={f.name} type={f.type} style={{ width: "100%", padding: "10px 14px", border: "1px solid #ddd", borderRadius: 6, fontSize: 14, fontFamily: "'Arial', sans-serif", boxSizing: "border-box" }} />
                   </div>
                 ))}
                 <div>
-                  <label style={{ fontSize: 12, color: "#555", fontFamily: "'Arial', sans-serif", fontWeight: 600, display: "block", marginBottom: 6 }}>{t.contact.interest}</label>
-                  <select style={{ width: "100%", padding: "10px 14px", border: "1px solid #ddd", borderRadius: 6, fontSize: 14, fontFamily: "'Arial', sans-serif", boxSizing: "border-box" }}>
+                  <label style={{ fontSize: 12, color: "#555", fontFamily: "'Arial', sans-serif", fontWeight: 600, display: "block", marginBottom: 6 }}>{t.contact.interest} *</label>
+                  <select required name="interest" style={{ width: "100%", padding: "10px 14px", border: "1px solid #ddd", borderRadius: 6, fontSize: 14, fontFamily: "'Arial', sans-serif", boxSizing: "border-box" }}>
                     {t.contact.interests.map((opt, i) => <option key={i}>{opt}</option>)}
                   </select>
                 </div>
                 <div>
-                  <label style={{ fontSize: 12, color: "#555", fontFamily: "'Arial', sans-serif", fontWeight: 600, display: "block", marginBottom: 6 }}>{t.contact.message}</label>
-                  <textarea rows={4} style={{ width: "100%", padding: "10px 14px", border: "1px solid #ddd", borderRadius: 6, fontSize: 14, fontFamily: "'Arial', sans-serif", boxSizing: "border-box", resize: "vertical" }} />
+                  <label style={{ fontSize: 12, color: "#555", fontFamily: "'Arial', sans-serif", fontWeight: 600, display: "block", marginBottom: 6 }}>{t.contact.message} *</label>
+                  <textarea required rows={4} name="message" style={{ width: "100%", padding: "10px 14px", border: "1px solid #ddd", borderRadius: 6, fontSize: 14, fontFamily: "'Arial', sans-serif", boxSizing: "border-box", resize: "vertical" }} />
                 </div>
-                <button type="submit" style={{
-                  background: TERRACOTA, color: BLANCO, border: "none", cursor: "pointer",
+                <p style={{ fontSize: 12, color: "#999", fontFamily: "'Arial', sans-serif", margin: 0 }}>{t.contact.requiredNote}</p>
+                {sendError && (
+                  <div style={{ background: "#FCEBEB", color: "#A32D2D", padding: "10px 14px", borderRadius: 6, fontSize: 13, fontFamily: "'Arial', sans-serif" }}>
+                    {t.contact.error}
+                  </div>
+                )}
+                <button type="submit" disabled={sending} style={{
+                  background: TERRACOTA, color: BLANCO, border: "none", cursor: sending ? "default" : "pointer",
                   padding: "14px", fontSize: 15, fontFamily: "'Arial', sans-serif", fontWeight: 700,
-                  borderRadius: 6, marginTop: 8,
-                }}>{t.contact.send}</button>
+                  borderRadius: 6, marginTop: 8, opacity: sending ? 0.7 : 1,
+                }}>{sending ? t.contact.sending : t.contact.send}</button>
               </form>
             )}
           </div>
