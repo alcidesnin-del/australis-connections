@@ -88,6 +88,15 @@ const ICON_PATHS = {
       <line x1="12" y1="21" x2="14" y2="18.6" />
     </>
   ),
+  institution: (
+    <>
+      <path d="M3 9 L12 4 L21 9 Z" />
+      <line x1="6" y1="11.5" x2="6" y2="17.5" />
+      <line x1="12" y1="11.5" x2="12" y2="17.5" />
+      <line x1="18" y1="11.5" x2="18" y2="17.5" />
+      <line x1="3" y1="20" x2="21" y2="20" />
+    </>
+  ),
   microscope: (
     <>
       <line x1="8" y1="21" x2="16" y2="21" />
@@ -139,7 +148,7 @@ const globalStyles = `
 
 const content = {
   es: {
-    nav: { about: "Nosotros", programs: "Programas", destinations: "Destinos", partners: "Partners", contact: "Contacto" },
+    nav: { about: "Nosotros", programs: "Programas", destinations: "Destinos", partners: "Colaboraciones", contact: "Contacto" },
     hero: {
       tag: "TURISMO CIENTÍFICO INTERNACIONAL DE ALTO NIVEL",
       headline: "Donde la Ciencia Encuentra su Territorio",
@@ -158,48 +167,48 @@ const content = {
       title: "Tres Generaciones Conectando el Conocimiento con Chile",
       p1: "Australis Connections nace de una tradición familiar de más de 50 años en turismo receptivo chileno. Nuestro legado comenzó con Sergio Nin (Sergio Nin de Cardona), empleado-fundador de Turismo Cocha y Senior ejecutivo de Sportstour, uno de los operadores de turismo receptivo más importantes de Chile en su época.",
       p2: "Hoy, Alcides (hijo) y Sergio (nieto) lideran un proyecto que integra esa experiencia con una visión clara: posicionar a Chile como el destino de referencia mundial para expediciones científicas internacionales, conectando investigadores, científicos y profesores con los proyectos activos y ecosistemas únicos del país.",
-      p3: "Nuestro modelo es simple y poderoso: diseñamos, coordinamos y garantizamos la excelencia de cada programa. Tercerizamos la operación con los mejores proveedores del país, con quienes tenemos tarifas preferenciales construidas durante décadas de relación profesional.",
+      p3: "Nuestro modelo es simple y poderoso: diseñamos, coordinamos y supervisamos cada programa. Tercerizamos la operación con proveedores locales de confianza, con quienes mantenemos tarifas preferenciales construidas durante décadas de relación profesional.",
       features: [
         "Red de proveedores con tarifas preferenciales negociadas",
-        "Acceso a observatorios NOIRLab, ESO La Silla y CEAZA",
+        "Visitas a observatorios del norte de Chile mediante sus programas públicos",
         "Programas de fauna silvestre con monitoreo científico activo",
         "Diseño de expediciones a medida para cada perfil científico",
-        "Cotización automática con sistema IA propio",
-        "Servicio de excelencia en cada detalle del programa",
+        "Cotización detallada y transparente para cada programa",
+        "Coordinación cuidadosa de cada detalle del programa",
       ],
     },
     programs: {
       tag: "EXPEDICIONES CIENTÍFICAS",
-      title: "Ciencia Viva en el Territorio Más Diverso del Planeta",
-      subtitle: "Cada expedición es diseñada a medida para científicos, investigadores y profesores, integrando acceso directo a proyectos activos, expertos locales y la red científica más sólida de Chile.",
+      title: "Ciencia Viva en Uno de los Territorios Más Diversos del Planeta",
+      subtitle: "Cada expedición se diseña a medida para científicos, investigadores y profesores, y los conecta con proyectos de investigación, expertos locales y sitios de campo en Chile.",
       items: [
         {
           icon: "fox",
           title: "Zorro Chilote",
           subtitle: "Conservación y Fauna Silvestre",
-          description: "Programa insignia de Australis Connections. Monitoreo activo del Zorro Chilote (Lycalopex fulvipes), una de las especies más raras y amenazadas del mundo. Trabajo en terreno con nuestro equipo científico en Chiloé.",
-          highlight: "Programa exclusivo en el mundo",
+          description: "Programa insignia de Australis Connections. Monitoreo activo del Zorro Chilote (Lycalopex fulvipes), un cánido en peligro de extinción. Trabajo de campo en Chiloé junto al equipo de monitoreo.",
+          highlight: "Integrado a un proyecto de investigación activo",
         },
         {
           icon: "telescope",
           title: "Astronomía Austral",
           subtitle: "Observatorios de Clase Mundial",
-          description: "Visitas diurnas coordinadas a NOIRLab/Cerro Tololo, ESO La Silla y observatorios privados en el norte de Chile. Reuniones con astrónomos activos, recorridos por las instalaciones y observación nocturna en telescopios privados habilitados para visitas.",
-          highlight: "El cielo más limpio del planeta",
+          description: "Visitas a observatorios profesionales del norte de Chile a través de sus programas públicos de visita, y observación nocturna en observatorios privados abiertos a grupos educativos. Cada itinerario se diseña según los intereses del grupo y las políticas de visita de cada institución.",
+          highlight: "Entre los mejores cielos del mundo para la astronomía",
         },
         {
           icon: "volcano",
           title: "Geología & Vulcanología",
           subtitle: "Laboratorios Naturales a Cielo Abierto",
           description: "Expediciones geológicas en algunos de los territorios más extraordinarios del planeta. Desierto de Atacama, cordillera andina y zonas volcánicas del sur de Chile, con guías especializados en geología y ciencias de la tierra.",
-          highlight: "Acceso a zonas de investigación activa",
+          highlight: "Sitios de campo elegidos según la disciplina del grupo",
         },
         {
           icon: "wave",
           title: "Oceanografía & Biodiversidad Marina",
           subtitle: "Corriente de Humboldt",
-          description: "Expediciones en uno de los sistemas oceánicos más productivos del planeta. Colaboración con CEAZA, ESMOI y centros de investigación marina en los fiordos patagónicos y el Archipiélago de Humboldt.",
-          highlight: "Ecosistema marino único en el mundo",
+          description: "Expediciones en uno de los sistemas oceánicos más productivos del planeta, con componentes de campo en los fiordos patagónicos y el Archipiélago de Humboldt, diseñadas según los objetivos de investigación de cada grupo.",
+          highlight: "Uno de los sistemas marinos más productivos del mundo",
         },
         {
           icon: "leaf",
@@ -210,35 +219,34 @@ const content = {
         },
         {
           icon: "compass",
-          title: "Programas Taylor Made",
+          title: "Programas a Medida",
           subtitle: "Diseño a Medida Total",
           description: "Para grupos FIT (2 a 4 personas), investigadores independientes o instituciones con requerimientos específicos. Desde expediciones a la Antártida hasta programas interdisciplinarios que combinan múltiples áreas científicas. Cada programa, diseñado desde cero.",
-          highlight: "Sin límites en el diseño del programa",
+          highlight: "Diseño según los objetivos del grupo",
         },
       ],
     },
     destinations: {
       tag: "TERRITORIO DE ESTUDIO",
-      title: "Chile: El Laboratorio Natural Más Diverso del Planeta",
+      title: "Chile: Un Laboratorio Natural de Diversidad Extraordinaria",
       subtitle: "4.300 kilómetros que concentran desiertos, volcanes, glaciares, fiordos, bosques templados y cielos de clase mundial.",
       items: [
-        { name: "Desierto de Atacama", desc: "Astronomía, geología extrema, salares y el cielo más limpio del mundo.", emoji: "cactus" },
-        { name: "Región de Coquimbo", desc: "Observatorios mundiales, ecosistemas semiáridos, fauna costera y CEAZA.", emoji: "star" },
-        { name: "Zona Central", desc: "Geología andina, viñedos científicos, geomorfología y bosques nativos.", emoji: "grapes" },
+        { name: "Desierto de Atacama", desc: "Astronomía, geología extrema, salares y cielos entre los mejores del mundo.", emoji: "cactus" },
+        { name: "Región de Coquimbo", desc: "Observatorios, ecosistemas semiáridos y fauna costera.", emoji: "star" },
+        { name: "Zona Central", desc: "Geología andina, geomorfología, viñedos y bosques nativos.", emoji: "grapes" },
         { name: "Chiloé & Los Lagos", desc: "Fauna silvestre endémica, ecosistemas húmedos y el Zorro Chilote.", emoji: "fox" },
         { name: "Patagonia", desc: "Glaciares, geología del granito, ecología de estepa y biodiversidad única.", emoji: "mountain" },
-        { name: "Antártida", desc: "Expediciones científicas al continente blanco. Programa Taylor Made exclusivo.", emoji: "snowflake" },
+        { name: "Antártida", desc: "Expediciones científicas al continente blanco. Disponible solo como programa a medida.", emoji: "snowflake" },
       ],
     },
     partners: {
-      tag: "ALIANZAS CIENTÍFICAS",
-      title: "Conectados con la Ciencia de Clase Mundial",
-      subtitle: "Construimos relaciones institucionales con centros de investigación y programas de educación de referencia en Chile. Comunicamos su estado con transparencia.",
+      tag: "RELACIONES INSTITUCIONALES",
+      title: "Cómo Trabajamos con la Comunidad Científica",
+      subtitle: "Construimos relaciones con investigadores, centros de investigación y programas de educación en Chile, y comunicamos su estado tal como es.",
       items: [
-        { name: "CEDUC UCN", desc: "Centro de Educación y Capacitación, Universidad Católica del Norte. Programa Travesía activo. Entidad patrocinadora CORFO.", status: "Alianza activa" },
-        { name: "Programa Zorro Chilote", desc: "Colaboración formalizada con Darío Moreira, investigador del Programa de Monitoreo del Zorro de Darwin (USACH / IEB), para nuestro programa insignia de trabajo de campo en Chiloé, integrado a un proyecto de investigación activo.", status: "Alianza formalizada" },
-        { name: "CEAZA", desc: "Centro Científico Avanzado de Zonas Áridas. Vinculación en desarrollo para integrar turismo científico con sus proyectos de investigación en oceanografía, biodiversidad y zonas áridas.", status: "Vínculo en desarrollo" },
-        { name: "Observatorios Astronómicos", desc: "Coordinamos observación astronómica mediante los programas públicos de visitas de los principales observatorios del norte de Chile (ESO La Silla, Cerro Tololo).", status: "Acceso mediante programas públicos" },
+        { icon: "institution", name: "CEDUC UCN", desc: "Participamos en el programa Travesía del CEDUC de la Universidad Católica del Norte, orientado al desarrollo de emprendimientos.", status: "Participación en programa" },
+        { icon: "fox", name: "Programa Zorro Chilote", desc: "Colaboración con Darío Moreira, investigador del Programa de Monitoreo del Zorro de Darwin, para nuestro programa insignia de trabajo de campo en Chiloé.", status: "Colaboración vigente" },
+        { icon: "telescope", name: "Observatorios Astronómicos", desc: "Coordinamos visitas mediante los programas públicos de visita de observatorios profesionales del norte de Chile, sujetas a las políticas de cada institución.", status: "Programas públicos de visita" },
       ],
     },
     model: {
@@ -247,22 +255,22 @@ const content = {
       steps: [
         { n: "01", title: "Diseñamos", desc: "Creamos la expedición a medida según los objetivos científicos y el perfil del grupo visitante." },
         { n: "02", title: "Coordinamos", desc: "Activamos nuestra red de proveedores con tarifas preferenciales y expertos científicos locales." },
-        { n: "03", title: "Garantizamos", desc: "Supervisamos cada detalle de la operación para asegurar una experiencia de excelencia absoluta." },
-        { n: "04", title: "Cotizamos", desc: "Nuestro sistema con IA genera cotizaciones automáticas en minutos, precisas y competitivas." },
+        { n: "03", title: "Supervisamos", desc: "Hacemos seguimiento de cada detalle de la operación antes y durante el programa." },
+        { n: "04", title: "Cotizamos", desc: "Preparamos una cotización detallada y desglosada para tu programa." },
       ],
     },
     cta: {
       headline: "Tu Próxima Expedición Científica Comienza Aquí",
-      paragraph: "No dejes tu próxima expedición en manos de un operador convencional. Conversemos sobre tus objetivos científicos y diseñemos juntos una experiencia que tú y tus colegas recordarán toda la vida.",
+      paragraph: "Cuéntanos tus objetivos científicos y diseñaremos un programa a la medida de tu grupo.",
       button: "Contactar un Especialista",
-      trust: "Respuesta en menos de 24 horas. Cotización sin compromiso.",
+      trust: "Respondemos personalmente cada consulta. Propuesta sin compromiso.",
     },
     footer: {
       desc: "Conectando universidades, investigadores y académicos de todo el mundo con los laboratorios naturales únicos de Chile. Tres generaciones de legado al servicio de la ciencia.",
       email: "info@australisconnections.com",
       phone: "+56 9 9163 0884",
       address: "Ovalle, Región de Coquimbo, Chile",
-      rights: "© 2026 Australis Connections. Todos los derechos reservados.",
+      rights: "© 2026 Australis Connections. Servicios Arauco SpA, RUT 76.443.777-2. Todos los derechos reservados.",
     },
     contact: {
       title: "Diseñemos Tu Expedición",
@@ -278,11 +286,12 @@ const content = {
       error: "No pudimos enviar tu mensaje. Por favor intenta de nuevo o escríbenos directamente a info@australisconnections.com",
       sending: "Enviando...",
       requiredNote: "* Todos los campos son obligatorios",
-      interests: ["Astronomía", "Zorro Chilote / Fauna Silvestre", "Geología & Vulcanología", "Oceanografía & Biodiversidad Marina", "Ecosistemas & Medio Ambiente", "Programa Taylor Made"],
+      privacy: "Usamos tus datos solo para responder tu consulta.",
+      interests: ["Astronomía", "Zorro Chilote / Fauna Silvestre", "Geología & Vulcanología", "Oceanografía & Biodiversidad Marina", "Ecosistemas & Medio Ambiente", "Programa a Medida"],
     },
   },
   en: {
-    nav: { about: "About", programs: "Programs", destinations: "Destinations", partners: "Partners", contact: "Contact" },
+    nav: { about: "About", programs: "Programs", destinations: "Destinations", partners: "Collaborations", contact: "Contact" },
     hero: {
       tag: "HIGH-LEVEL INTERNATIONAL SCIENTIFIC TRAVEL",
       headline: "Where Science Meets Its Territory",
@@ -301,48 +310,48 @@ const content = {
       title: "Three Generations Connecting Knowledge with Chile",
       p1: "Australis Connections was born from a family tradition of more than 50 years in Chilean incoming tourism. Our legacy began with Sergio Nin (Sergio Nin de Cardona), founding employee of Turismo Cocha and Senior Executive of Sportstour, one of Chile's most important incoming tourism operators of its era.",
       p2: "Today, Alcides (son) and Sergio (grandson) lead a project with a clear vision: positioning Chile as the world reference destination for international scientific expeditions, connecting researchers, scientists and professors with the country's active projects and unique ecosystems.",
-      p3: "Our model is simple and powerful: we design, coordinate and guarantee the excellence of every program. We outsource operations to the country's best providers, with whom we hold preferential rates built over decades of professional relationships.",
+      p3: "Our model is simple and powerful: we design, coordinate and oversee every program. We outsource operations to trusted local providers, with whom we hold preferential rates built over decades of professional relationships.",
       features: [
         "Provider network with negotiated preferential rates",
-        "Access to NOIRLab, ESO La Silla and CEAZA observatories",
+        "Visits to northern Chile observatories through their public programs",
         "Wildlife programs with active scientific monitoring",
         "Custom expedition design for each scientific profile",
-        "Automatic quoting with proprietary AI system",
-        "Excellence in every detail of your program",
+        "Detailed, transparent quotation for every program",
+        "Careful coordination of every program detail",
       ],
     },
     programs: {
       tag: "SCIENTIFIC EXPEDITIONS",
-      title: "Living Science in the Planet's Most Diverse Territory",
-      subtitle: "Every expedition is tailor-made for scientists, researchers and professors, integrating direct access to active projects, local experts and Chile's most solid scientific network.",
+      title: "Living Science in One of the Planet's Most Diverse Territories",
+      subtitle: "Every expedition is tailor-made for scientists, researchers and professors, connecting them with research projects, local experts and field sites in Chile.",
       items: [
         {
           icon: "fox",
           title: "Darwin's Fox",
           subtitle: "Conservation & Wildlife",
-          description: "Australis Connections' flagship program. Active monitoring of the Darwin's Fox (Lycalopex fulvipes), one of the rarest and most endangered species in the world. Field work with our scientific team in Chiloé.",
-          highlight: "Exclusive program in the world",
+          description: "Australis Connections' flagship program. Active monitoring of the Darwin's Fox (Lycalopex fulvipes), an endangered canid. Fieldwork in Chiloé alongside the monitoring team.",
+          highlight: "Integrated with an active research project",
         },
         {
           icon: "telescope",
           title: "Austral Astronomy",
           subtitle: "World-Class Observatories",
-          description: "Daytime coordinated visits to NOIRLab/Cerro Tololo, ESO La Silla and private observatories in northern Chile. Meetings with active astronomers, facility tours and night observation at private telescopes enabled for educational visits.",
-          highlight: "The cleanest sky on the planet",
+          description: "Visits to professional observatories in northern Chile through their public visit programs, plus night observation at private observatories open to educational groups. Each itinerary is designed around the group's interests and each institution's visit policies.",
+          highlight: "Among the best skies in the world for astronomy",
         },
         {
           icon: "volcano",
           title: "Geology & Volcanology",
           subtitle: "Open-Air Natural Laboratories",
           description: "Geological expeditions across some of the most extraordinary territories on the planet. Atacama Desert, Andean mountain range and volcanic zones in southern Chile, with guides specialized in geology and earth sciences.",
-          highlight: "Access to active research zones",
+          highlight: "Field sites chosen for the group's discipline",
         },
         {
           icon: "wave",
           title: "Oceanography & Marine Biodiversity",
           subtitle: "Humboldt Current System",
-          description: "Expeditions in one of the planet's most productive ocean systems. Collaboration with CEAZA, ESMOI and marine research centers in Patagonian fjords and the Humboldt Archipelago.",
-          highlight: "Unique marine ecosystem in the world",
+          description: "Expeditions in one of the planet's most productive ocean systems, with field components in Patagonian fjords and the Humboldt Archipelago, designed around each group's research objectives.",
+          highlight: "One of the world's most productive marine systems",
         },
         {
           icon: "leaf",
@@ -353,35 +362,34 @@ const content = {
         },
         {
           icon: "compass",
-          title: "Taylor Made Programs",
+          title: "Tailor-Made Programs",
           subtitle: "Total Custom Design",
           description: "For FIT groups (2 to 4 people), independent researchers or institutions with specific requirements. From Antarctic expeditions to interdisciplinary programs combining multiple scientific fields. Every program, designed from scratch.",
-          highlight: "No limits in program design",
+          highlight: "Designed around the group's objectives",
         },
       ],
     },
     destinations: {
       tag: "STUDY TERRITORY",
-      title: "Chile: The Planet's Most Diverse Natural Laboratory",
+      title: "Chile: A Natural Laboratory of Extraordinary Diversity",
       subtitle: "4,300 kilometers concentrating deserts, volcanoes, glaciers, fjords, temperate forests and world-class skies.",
       items: [
-        { name: "Atacama Desert", desc: "Astronomy, extreme geology, salt flats and the world's cleanest sky.", emoji: "cactus" },
-        { name: "Coquimbo Region", desc: "World observatories, semi-arid ecosystems, coastal fauna and CEAZA.", emoji: "star" },
-        { name: "Central Chile", desc: "Andean geology, scientific vineyards, geomorphology and native forests.", emoji: "grapes" },
+        { name: "Atacama Desert", desc: "Astronomy, extreme geology, salt flats and some of the world's best skies.", emoji: "cactus" },
+        { name: "Coquimbo Region", desc: "Observatories, semi-arid ecosystems and coastal fauna.", emoji: "star" },
+        { name: "Central Chile", desc: "Andean geology, geomorphology, vineyards and native forests.", emoji: "grapes" },
         { name: "Chiloé & Los Lagos", desc: "Endemic wildlife, humid ecosystems and the Darwin's Fox.", emoji: "fox" },
         { name: "Patagonia", desc: "Glaciers, granite geology, steppe ecology and unique biodiversity.", emoji: "mountain" },
-        { name: "Antarctica", desc: "Scientific expeditions to the white continent. Exclusive Taylor Made program.", emoji: "snowflake" },
+        { name: "Antarctica", desc: "Scientific expeditions to the white continent. Available only as a tailor-made program.", emoji: "snowflake" },
       ],
     },
     partners: {
-      tag: "SCIENTIFIC ALLIANCES",
-      title: "Connected with World-Class Science",
-      subtitle: "We build institutional relationships with reference research centers and education programs in Chile. We communicate their status with transparency.",
+      tag: "INSTITUTIONAL RELATIONSHIPS",
+      title: "How We Work with the Scientific Community",
+      subtitle: "We build relationships with researchers, research centers and education programs in Chile, and we report their status as it stands.",
       items: [
-        { name: "CEDUC UCN", desc: "Education and Training Center, Universidad Católica del Norte. Active Travesía program. CORFO sponsoring entity.", status: "Active alliance" },
-        { name: "Darwin's Fox Program", desc: "Formalized collaboration with Darío Moreira, researcher on the Darwin's Fox Monitoring Program (USACH / IEB), for our flagship fieldwork program in Chiloé, integrated into an active research project.", status: "Formalized alliance" },
-        { name: "CEAZA", desc: "Advanced Center for Arid Zone Research. Relationship in development to integrate scientific tourism with its research projects in oceanography, biodiversity and arid zones.", status: "Relationship in development" },
-        { name: "Astronomical Observatories", desc: "We coordinate astronomical observation through the public visit programs of the main observatories in northern Chile (ESO La Silla, Cerro Tololo).", status: "Access through public programs" },
+        { icon: "institution", name: "CEDUC UCN", desc: "We take part in the Travesía program of CEDUC at the Universidad Católica del Norte, which supports early-stage ventures.", status: "Program participant" },
+        { icon: "fox", name: "Darwin's Fox Program", desc: "Collaboration with Darío Moreira, researcher on the Darwin's Fox Monitoring Program, for our flagship fieldwork program in Chiloé.", status: "Active collaboration" },
+        { icon: "telescope", name: "Astronomical Observatories", desc: "We arrange visits through the public visit programs of professional observatories in northern Chile, subject to each institution's policies.", status: "Public visit programs" },
       ],
     },
     model: {
@@ -390,22 +398,22 @@ const content = {
       steps: [
         { n: "01", title: "We Design", desc: "We create the custom expedition based on your scientific objectives and the profile of your group." },
         { n: "02", title: "We Coordinate", desc: "We activate our network of providers with preferential rates and local scientific experts." },
-        { n: "03", title: "We Guarantee", desc: "We supervise every detail of the operation to ensure an absolutely excellent experience." },
-        { n: "04", title: "We Quote", desc: "Our AI system generates automatic quotes in minutes, precise and competitive." },
+        { n: "03", title: "We Oversee", desc: "We follow every operational detail before and during the program." },
+        { n: "04", title: "We Quote", desc: "We prepare a detailed, itemized quotation for your program." },
       ],
     },
     cta: {
       headline: "Your Next Scientific Expedition Starts Here",
-      paragraph: "Don't leave your next expedition in the hands of a conventional operator. Let's talk about your scientific objectives and design together an experience you and your colleagues will remember for a lifetime.",
+      paragraph: "Tell us about your scientific objectives and we will design a program around your group.",
       button: "Contact a Specialist",
-      trust: "Response within 24 hours. No-obligation quote.",
+      trust: "We reply to every inquiry personally. No-obligation proposal.",
     },
     footer: {
       desc: "Connecting universities, researchers and academics worldwide with Chile's unique natural laboratories. Three generations of legacy in service of science.",
       email: "info@australisconnections.com",
       phone: "+56 9 9163 0884",
       address: "Ovalle, Coquimbo Region, Chile",
-      rights: "© 2026 Australis Connections. All rights reserved.",
+      rights: "© 2026 Australis Connections. Servicios Arauco SpA, Chilean tax ID (RUT) 76.443.777-2. All rights reserved.",
     },
     contact: {
       title: "Let's Design Your Expedition",
@@ -421,7 +429,8 @@ const content = {
       error: "We couldn't send your message. Please try again or email us directly at info@australisconnections.com",
       sending: "Sending...",
       requiredNote: "* All fields are required",
-      interests: ["Astronomy", "Darwin's Fox / Wildlife", "Geology & Volcanology", "Oceanography & Marine Biodiversity", "Ecosystems & Environment", "Taylor Made Program"],
+      privacy: "We use your details only to respond to your inquiry.",
+      interests: ["Astronomy", "Darwin's Fox / Wildlife", "Geology & Volcanology", "Oceanography & Marine Biodiversity", "Ecosystems & Environment", "Tailor-Made Program"],
     },
   },
 };
@@ -717,13 +726,14 @@ export default function App() {
                 background: BLANCO, borderRadius: 12, padding: 32,
                 boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
                 display: "flex", gap: 24, alignItems: "flex-start",
+                gridColumn: (t.partners.items.length % 2 === 1 && i === t.partners.items.length - 1) ? "1 / -1" : "auto",
               }}>
                 <div style={{
-                  width: 48, height: 48, borderRadius: 8,
-                  background: `linear-gradient(135deg, ${AZUL}, ${VERDE})`,
+                  width: 56, height: 56, borderRadius: 8,
+                  background: AZUL,
                   flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center",
                   color: BLANCO, fontSize: 20,
-                }}><Icon name="microscope" size={22} color={BLANCO} /></div>
+                }}><Icon name={p.icon} size={30} color={BLANCO} /></div>
                 <div>
                   <h3 style={{ fontSize: 17, fontWeight: 700, color: AZUL, marginBottom: 8 }}>{p.name}</h3>
                   <p style={{ color: "#666", fontSize: 14, lineHeight: 1.6, fontFamily: "'Arial', sans-serif", marginBottom: 12 }}>{p.desc}</p>
@@ -852,7 +862,7 @@ export default function App() {
                   <label style={{ fontSize: 12, color: "#555", fontFamily: "'Arial', sans-serif", fontWeight: 600, display: "block", marginBottom: 6 }}>{t.contact.message} *</label>
                   <textarea required rows={4} name="message" style={{ width: "100%", padding: "10px 14px", border: "1px solid #ddd", borderRadius: 6, fontSize: 14, fontFamily: "'Arial', sans-serif", boxSizing: "border-box", resize: "vertical" }} />
                 </div>
-                <p style={{ fontSize: 12, color: "#999", fontFamily: "'Arial', sans-serif", margin: 0 }}>{t.contact.requiredNote}</p>
+                <p style={{ fontSize: 12, color: "#999", fontFamily: "'Arial', sans-serif", margin: 0 }}>{t.contact.requiredNote} {t.contact.privacy}</p>
                 {sendError && (
                   <div style={{ background: "#FCEBEB", color: "#A32D2D", padding: "10px 14px", borderRadius: 6, fontSize: 13, fontFamily: "'Arial', sans-serif" }}>
                     {t.contact.error}
