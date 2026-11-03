@@ -246,7 +246,7 @@ const content = {
       items: [
         { icon: "institution", name: "CEDUC UCN", desc: "Participamos en el programa Travesía del CEDUC de la Universidad Católica del Norte, orientado al desarrollo de emprendimientos.", status: "Participación en programa" },
         { icon: "fox", name: "Programa Zorro Chilote", desc: "Colaboración con Darío Moreira, investigador del Programa de Monitoreo del Zorro de Darwin, para nuestro programa insignia de trabajo de campo en Chiloé.", status: "Colaboración vigente" },
-        { icon: "telescope", name: "Observatorios Astronómicos", desc: "Coordinamos visitas mediante los programas públicos de visita de observatorios profesionales del norte de Chile, sujetas a las políticas de cada institución.", status: "Programas públicos de visita" },
+        { icon: "telescope", name: "Observatorios Astronómicos", desc: "Los observatorios profesionales del norte de Chile ofrecen programas públicos de visita. Planificamos itinerarios que respetan las políticas y los procedimientos de cada institución.", status: "Sin acuerdo institucional" },
       ],
     },
     model: {
@@ -389,7 +389,7 @@ const content = {
       items: [
         { icon: "institution", name: "CEDUC UCN", desc: "We take part in the Travesía program of CEDUC at the Universidad Católica del Norte, which supports early-stage ventures.", status: "Program participant" },
         { icon: "fox", name: "Darwin's Fox Program", desc: "Collaboration with Darío Moreira, researcher on the Darwin's Fox Monitoring Program, for our flagship fieldwork program in Chiloé.", status: "Active collaboration" },
-        { icon: "telescope", name: "Astronomical Observatories", desc: "We arrange visits through the public visit programs of professional observatories in northern Chile, subject to each institution's policies.", status: "Public visit programs" },
+        { icon: "telescope", name: "Astronomical Observatories", desc: "Professional observatories in northern Chile offer public visit programs. We plan itineraries that respect each institution's policies and procedures.", status: "No institutional agreement" },
       ],
     },
     model: {
@@ -501,13 +501,13 @@ export default function App() {
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ cursor: "pointer" }} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
             <img
-              src="/logo.png"
+              src={scrolled ? "/logo-nav.png" : "/logo-nav-light.png"}
               alt="Australis Connections"
               style={{
-                height: scrolled ? 100 : 130,
+                height: scrolled ? 72 : 96,
                 width: "auto",
+                display: "block",
                 transition: "height 0.3s ease",
-                filter: scrolled ? "none" : "brightness(0) invert(1)",
               }}
             />
           </div>
@@ -788,7 +788,7 @@ export default function App() {
               ))}
             </div>
             <div>
-              <h4 style={{ color: BLANCO, fontSize: 14, fontWeight: 700, marginBottom: 16, fontFamily: "'Arial', sans-serif" }}>{lang === "es" ? "Links" : "Links"}</h4>
+              <h4 style={{ color: BLANCO, fontSize: 14, fontWeight: 700, marginBottom: 16, fontFamily: "'Arial', sans-serif" }}>{lang === "es" ? "Enlaces" : "Links"}</h4>
               {["about","programs","destinations","partners","contact"].map(k => (
                 <button key={k} onClick={() => scrollTo(k)} style={{
                   display: "block", background: "none", border: "none", cursor: "pointer",
